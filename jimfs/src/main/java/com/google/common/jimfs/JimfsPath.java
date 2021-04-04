@@ -383,8 +383,7 @@ final class JimfsPath implements Path {
 
   @Override
   public File toFile() {
-    // documented as unsupported for anything but the default file system
-    throw new UnsupportedOperationException();
+    return new WrappedJavaFile(this);
   }
 
   @Override
